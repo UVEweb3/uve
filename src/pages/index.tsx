@@ -34,7 +34,6 @@ function Routing() {
 <Container className="text-center text-white m-0 p-0 mw-100" id='containerPersonalizado' style={{backgroundColor:'#111120', border: '2px solid white', overflow: 'hidden'}}>
       <h1 className="display-4 font-weight-bold">Empower your knowledge<br />and monetize your impact</h1>
       <p className="lead">Create, tokenize and monetize your educational workshops.<br />Transform education now!</p>
-      
       <AccountInfo /> 
       <Row className="justify-content-center">
         <Col md={12} className="">
