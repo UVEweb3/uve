@@ -25,7 +25,7 @@ export function Header({ isAccountVisible }: Props) {
           <Nav className="ml-auto">
             <Nav.Link href="#home" style={{color:'white',marginRight:'2.5rem'}} >About us</Nav.Link>
             <Nav.Link href="#features" style={{color:'white',marginRight:'2.5rem'}} >Events</Nav.Link>
-            <Nav.Link href="#features" style={{color:'white',marginRight:'2.5rem'}} >Features</Nav.Link>
+            <Nav.Link href="#features" style={{color:'white',marginRight:'2.5rem'}} >MarketPlace</Nav.Link>
             {isAccountVisible && <AccountInfo />}
           </Nav>
         </Navbar.Collapse>

@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Home } from "./home";
+//import { Home } from "./home";
 //import { Landing } from "./landing";
 import "../../src/pages/home/custom.css";
 import { useAccount } from '@gear-js/react-hooks';
@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import { Button } from 'react-bootstrap';
 import {AccountInfo} from './../components/layout/header/account-info'
+import { Footer } from "@/components/ExampleComponents/Footer/Footer";
 
 type Props = {
   isAccountVisible: boolean;
@@ -109,36 +110,7 @@ function Routing() {
       </div>
 
     
-      <div className="footer-container">
-      <Container>
-        <Row className="justify-content-between align-items-center">
-          <Col xs={12} md={6} className="text-center text-md-left">
-            <p className="footer-text">
-              <img src="/src/components/layout/header/img/LogoUVE.png" alt="UVE Logo" className="footer-logo" style={{ width: '10vh' }} />
-              <span>© {currentYear} Copyright: UVE</span>
-            </p>
-          </Col>
-          <Col xs={12} md={4} className="text-center text-md-right">
-            <div className="footer-icons">
-              <a href="https://link_to_page1.com" target="_blank" rel="noopener noreferrer">
-                <img src="/src/components/layout/header/img/Icon01.png" alt="Icon 1" className="footer-icon" />
-              </a>
-              <a href="https://link_to_page2.com" target="_blank" rel="noopener noreferrer">
-                <img src="/src/components/layout/header/img/Icon02.png" alt="Icon 2" className="footer-icon" />
-              </a>
-              <a href="https://link_to_page3.com" target="_blank" rel="noopener noreferrer">
-                <img src="/src/components/layout/header/img/Icon03.png" alt="Icon 3" className="footer-icon" />
-              </a>
-            </div>
-            <div className="footer-contact ">
-              <p className='position'>Contact us</p>
-              <p className='position2'>uve.web3@gmail.com</p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-
+    <Footer/>
 
     </Container>
 

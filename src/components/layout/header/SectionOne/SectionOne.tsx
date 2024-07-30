@@ -4,7 +4,7 @@ import { AccountInfo } from '../././../header/account-info';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const SectionOne = ({ title, description, buttonText, imageUrl }) => {
+function SectionOne = ({ title, description, buttonText, imageUrl }) => {
   return (
     <>
       <h1 className="display-4 font-weight-bold">{title}</h1>
