@@ -26,7 +26,7 @@ export function AccountInfo() {
       {account ? (
         <Wallet balance={formattedBalance} address={account.address} name={account.meta.name} onClick={openModal} />
       ) : (
-        <Button  text="Star"  style={{marginRight:'6.5vw',backgroundColor:'#FF005B',borderRadius:'14%',border:'none'}} onClick={openModal} />
+        <Button  text="Star"  style={{marginRight:'6.5vw',backgroundColor:'#FF005B',borderRadius:'14%',border:'none', fontSize:'25px',fontFamily:'Urbanist'}} onClick={openModal} />
       )}
       {isModalOpen && <AccountsModal accounts={accounts} close={closeModal} />}
     </>

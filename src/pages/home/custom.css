@@ -72,3 +72,19 @@
     justify-content: center;
   }
 }
+
+.carousel-control-prev-icon{
+  margin-left: -171%;
+}
+
+.carousel-control-next-icon{
+  margin-right: -171% !important;
+}
+.alingboton{
+  margin-left: 37%;
+}
+
+
+.accoun-info-wrapper {
+  margin-left: 12%;
+}

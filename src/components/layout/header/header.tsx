@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { AccountInfo } from './account-info';
 import './header.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,7 +16,7 @@ export function Header({ isAccountVisible }: Props) {
   return (
     <header>
        <Navbar collapseOnSelect expand="lg" style={{backgroundColor:'#111120'}}>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img className='logo'  src="/src/components/layout/header/img/LogoUVE.png" alt="Logo" height="40" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -30,9 +29,6 @@ export function Header({ isAccountVisible }: Props) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
-      
-      
     </header>
   );
 
