@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext,ChangeEvent  } from 'react';
 import "./custom.css";
 import { useContractUtils } from '@/app/hooks';
 import { dAppContext } from '@/Context/dappContext';
 import { useAccount } from '@gear-js/react-hooks';
 import { Container, Row, Col, Form, Image, Button } from 'react-bootstrap';
 import { Footer } from '@/components/ExampleComponents/Footer/Footer';
-import { Grid } from 'lucide-react';
+
 
 type Props = {
   isAccountVisible: boolean;
@@ -165,6 +165,10 @@ function Create() {
             </Col>
           </Row>
         </Form>
+        
+     
+    
+
       </Container>
       <Footer />
     </div>

@@ -1,7 +1,6 @@
 .visually-hidden{display: none !important;}
 
-  /* custom.css */
-/* footer.css */
+ 
 .footer-container {
   background-color: #111120;
   padding: 20px 0;
@@ -73,13 +72,6 @@
   }
 }
 
-.carousel-control-prev-icon{
-  margin-left: -171%;
-}
-
-.carousel-control-next-icon{
-  margin-right: -171% !important;
-}
 .alingboton{
   margin-left: 37%;
 }
