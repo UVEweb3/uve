@@ -5,6 +5,7 @@ import "../../src/pages/home/custom.css";
 import path from "path";
 import { homedir } from "os";
 import HomeChannel from "./HomeChannel/homechannel";
+import HomeEvent from "./HomeEvent/homeevent";
 
 
 type Props = {
@@ -17,6 +18,7 @@ const routes = [
   { path: "/Create", Page: Create },
   { path: "/", Page: Home },
   { path: "/HomeChannel", Page: HomeChannel },
+  { path: "/HomeEvent", Page: HomeEvent },
 ];
  
 function Routing() {

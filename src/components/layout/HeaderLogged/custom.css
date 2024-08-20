@@ -19,3 +19,6 @@
           }
         }
         
+.navbar .nav-link:visited {
+  color: rgb(255, 38, 255) !important;
+}
