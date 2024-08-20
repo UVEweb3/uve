@@ -17,11 +17,9 @@
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["./src/*"]
-      //      "@/app/*": ["./src/app/*"],
-      //      "@/assets/*": ["./src/assets/*"],
-      //      "@/components/*": ["./src/components/*"]
     },
-    "types": ["vite-plugin-svgr/client"]
+    "types": ["vite-plugin-svgr/client"],
+    "sourceMap": true  // Agrega esta línea
   },
   "include": ["src"],
   "references": [
