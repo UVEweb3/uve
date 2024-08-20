@@ -24,7 +24,7 @@ export default defineConfig({
   assetsInclude: ['**/*.wasm?inline', '**/*.txt?inline'],
   build: {
     sourcemap: true, 
-    outDir: 'build',
+    outDir: 'dist',
   },
   
 });
