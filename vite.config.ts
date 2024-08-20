@@ -22,6 +22,9 @@ export default defineConfig({
   },
   plugins: [svgr(), react(), nodePolyfills(), eslint()],
   assetsInclude: ['**/*.wasm?inline', '**/*.txt?inline'],
-  build: { outDir: 'build',sourcemap: true, },
+  build: {
+    sourcemap: true, 
+    outDir: 'build',
+  },
   
 });
