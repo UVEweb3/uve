@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useContext,ChangeEvent  } from 'react';
+import React, { useEffect, useState, useContext, ChangeEvent } from 'react';
 import "./custom.css";
 import { useContractUtils } from '@/app/hooks';
 import { dAppContext } from '@/Context/dappContext';
 import { useAccount } from '@gear-js/react-hooks';
 import { Container, Row, Col, Form, Image, Button } from 'react-bootstrap';
 import { Footer } from '@/components/ExampleComponents/Footer/Footer';
-
 
 type Props = {
   isAccountVisible: boolean;
@@ -46,18 +45,20 @@ function Create() {
     if (setCurrentVoucherId) setCurrentVoucherId(null);
   }, [account]);
 
-  const [selectedImage, setSelectedImage] = useState("/src/components/layout/header/img/LogoMKT.svg");
-  const [selectedBannerImage, setSelectedBannerImage] = useState("/src/components/layout/header/img/Banner MKT Community.jpeg");
+  const [selectedImage, setSelectedImage] = useState<string>("/src/components/layout/header/img/LogoMKT.svg");
+  const [selectedBannerImage, setSelectedBannerImage] = useState<string>("/src/components/layout/header/img/Banner MKT Community.jpeg");
 
-  const handleImageUpload = (event) => {
-    const file = event.target.files[0];
+  const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        if (event.target.id === "logo-upload") {
-          setSelectedImage(reader.result);
-        } else if (event.target.id === "banner-upload") {
-          setSelectedBannerImage(reader.result);
+        if (typeof reader.result === 'string') {
+          if (event.target.id === "logo-upload") {
+            setSelectedImage(reader.result);
+          } else if (event.target.id === "banner-upload") {
+            setSelectedBannerImage(reader.result);
+          }
         }
       };
       reader.readAsDataURL(file);
