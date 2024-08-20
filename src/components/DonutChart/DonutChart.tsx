@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './custom.css';
+
 const data = {
     labels: ['Finished', 'In progress', 'Not Started', 'Other'],
     datasets: [{
@@ -14,7 +14,7 @@ const data = {
 const options = {
     plugins: {
         legend: {
-            position: 'right',  // Configura la leyenda para que se muestre a la derecha
+            position: 'right' as 'right',  // Usar type assertion para que TypeScript lo acepte
         }
     }
 };
@@ -28,4 +28,3 @@ const DonutChart = () => {
 }
 
 export default DonutChart;
-
