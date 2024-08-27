@@ -19,7 +19,9 @@
       "@/*": ["./src/*"]
     },
     "types": ["vite-plugin-svgr/client"],
-    "sourceMap": true  
+    "sourceMap": true,
+    "inlineSources": true  
+    
   },
   "include": ["src"],
   "references": [
