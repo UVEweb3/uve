@@ -6,6 +6,11 @@ import path from "path";
 import { homedir } from "os";
 import HomeChannel from "./HomeChannel/homechannel";
 import HomeEvent from "./HomeEvent/homeevent";
+import { CreateUser } from "./CreateUser";
+import {HomeUsers} from "./HomeUsers/homeusers";
+import { Import } from "lucide-react";
+import HomeEventUsers from "./HomeEventUsers/homeeventusers";
+
 
 
 type Props = {
@@ -19,6 +24,9 @@ const routes = [
   { path: "/", Page: Home },
   { path: "/HomeChannel", Page: HomeChannel },
   { path: "/HomeEvent", Page: HomeEvent },
+  { path: "/CreateUser", Page: CreateUser },
+  {path:"/HomeUsers", Page: HomeUsers},
+  {path:"/HomeEventUsers", Page: HomeEventUsers},
 ];
  
 function Routing() {

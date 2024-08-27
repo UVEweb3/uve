@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react';
-import "./customhomechannel.css";
+import "./customhomeusers.css";
 import { useContractUtils } from '@/app/hooks';
 import { dAppContext } from '@/Context/dappContext';
 import { useAccount } from '@gear-js/react-hooks';
-import { Container, Row, Col, Image, ButtonGroup, Dropdown, Badge, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Image, ButtonGroup, Dropdown, Badge, Carousel, ProgressBar } from 'react-bootstrap';
 import { Footer } from '@/components/ExampleComponents/Footer/Footer';
-import DonutChart from '@/components/DonutChart/DonutChart';
+import DonutChart from '@/components/DonutChartUser/DonutChartUser';
 
 type Props = {
   isAccountVisible: boolean;
 };
 
-function HomeChannel() {
+function HomeUsers() {
   const { account } = useAccount();
   const { 
     currentVoucherId,
@@ -24,17 +24,9 @@ function HomeChannel() {
   const [voucherModeInPolkadotAccount, setVoucherModeInPolkadotAccount] = useState(false);
   const [contractState, setContractState] = useState("");
 
-  // Usa el estado para manejar el número de notificaciones
-  const [notifications, setNotifications] = useState(2); // Inicializado con la constante
-  
-  // Opcional: Funciones para modificar el número de notificaciones en el futuro
-  const addNotification = () => {
-    setNotifications(notifications + 1);
-  };
-
-  const clearNotifications = () => {
-    setNotifications(0);
-  };
+  const [notifications, setNotifications] = useState(2);
+    ///certifications
+      const now = 60;
 
   useEffect(() => {
     if (!account) {
@@ -51,66 +43,102 @@ function HomeChannel() {
         className="d-flex flex-column align-items-center text-white m-0 p-0 mw-100 mobile-padding"  
         style={{ backgroundColor: '#111120', border: '2px solid white', overflow: 'hidden', padding: '20px' }}
       >
-   <Row className="header-row justify-content-center align-items-center mb-4 mt-4">
-  <Col xs={12} md={2} className="text-left">
-    <Image src="/src/components/layout/header/img/LogoMKT.svg" width={200} height={200} />
-  </Col>
-  <Col xs={12} md={8} className="text-start">
-    <h1>Welcome to MKT Community</h1>
-  </Col>
-  <Col xs={12} md={2} className="text-end border-0 m-0">
-    <Dropdown as={ButtonGroup} drop="end">
-      <Dropdown.Toggle split variant="" id="dropdown-split-basic" className="custom-dropdown-toggle colorbtndropdown">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
-          <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
-        {notifications > 1 && (
-          <Badge bg="danger" pill className="ms-2">
-            {notifications}
-          </Badge>
-        )}
-      </Dropdown.Toggle>
+        <Row className="header-row justify-content-center align-items-center mb-4 mt-4">
+          <Col xs={12} md={2} className="text-left">
+            <Image 
+              src="/src/components/layout/header/img/06.png" 
+              width={200} 
+              height={200} 
+              className="rounded-circle" 
+            />
+          </Col>
+          <Col xs={12} md={8} className="text-start">
+            <h1>Welcome to Valeska R. Zegarra</h1>
+          </Col>
+          <Col xs={12} md={2} className="text-end border-0 m-0">
+            <Dropdown as={ButtonGroup} drop="end">
+              <Dropdown.Toggle split variant="" id="dropdown-split-basic" className="custom-dropdown-toggle colorbtndropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                {notifications > 1 && (
+                  <Badge bg="danger" pill className="ms-2">
+                    {notifications}
+                  </Badge>
+                )}
+              </Dropdown.Toggle>
 
-      <Dropdown.Menu className="custom-dropdown-menu">
-        <Dropdown.Item href="#/action-1" className="custom-dropdown-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bell" viewBox="0 0 16 16">
-            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"></path>
-          </svg>
-          Notifications
-          <Badge bg="danger" pill className="ms-2">
-            {notifications}
-          </Badge>
-        </Dropdown.Item>
-        <Dropdown.Item href="#/action-2" className="custom-dropdown-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person" viewBox="0 0 16 16">
-            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-          </svg>
-          Uvers
-        </Dropdown.Item>
-        <Dropdown.Item href="#/action-3" className="custom-dropdown-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-power" viewBox="0 0 16 16">
-            <path d="M7.5 1v7h1V1z"/>
-            <path d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812"/>
-          </svg>
-          Log out
-        </Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-  </Col>
-</Row>
+              <Dropdown.Menu className="custom-dropdown-menu">
+                <Dropdown.Item href="#/action-1" className="custom-dropdown-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bell" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"></path>
+                  </svg>
+                  Notifications
+                  <Badge bg="danger" pill className="ms-2">
+                    {notifications}
+                  </Badge>
+                </Dropdown.Item>
+                <Dropdown.Item href="#/action-2" className="custom-dropdown-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-mailbox-flag" viewBox="0 0 16 16">
+                    <path d="M10.5 8.5V3.707l.854-.853A.5.5 0 0 0 11.5 2.5v-2A.5.5 0 0 0 11 0H9.5a.5.5 0 0 0-.5.5v8zM5 7c0 .334-.164.264-.415.157C4.42 7.087 4.218 7 4 7s-.42.086-.585.157C3.164 7.264 3 7.334 3 7a1 1 0 0 1 2 0"/>
+                    <path d="M4 3h4v1H6.646A4 4 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3V3a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3"/>
+                  </svg>
+                  Box
+                </Dropdown.Item>
+                <Dropdown.Item href="#/action-3" className="custom-dropdown-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-power" viewBox="0 0 16 16">
+                    <path d="M7.5 1v7h1V1z"/>
+                    <path d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812"/>
+                  </svg>
+                  Log out
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+        </Row>
 
-
+        {/* My Activities Section */}
         <div className="home-channel-container gdona">
-            <Row className="justify-content-center bgdona">
-                <Col md={12} className="mb-4 align-items-end">
-                    <h2 className='mt-4 ml-5' >Uvers Progress</h2>
-                    <DonutChart />
-                </Col>
-            </Row>
+          <Row className="justify-content-center bgdona">
+            <Col md={12} className="mb-4 align-items-end">
+              <h2 className='mt-4 ml-5' >My activities</h2>
+              <DonutChart />
+            </Col>
+          </Row>
         </div>
+            {/* Certifications Section */}
+            <div className="certifications-container gdona mb-5 pb-5 mt-5 pt-5">
+              <Row className="justify-content-center align-items-center">
+                <Col xs={4} md={2} className="text-center">
+                  <Image
+                    src="/src/components/layout/header/img/certifications.svg" 
+                    alt="Certifications Icon"
+                    className="certifications-icon"
+                    width={200} 
+                          height={200} 
+                  />
+                </Col>
+                <Col xs={8} md={10}>
+                  <div className="d-flex flex-column">
+                    <h4 className="certifications-title">Certifications</h4>
+                    <p className="certifications-text">00/00 Certifications</p>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="justify-content-center align-items-center mt-3">
+                <Col xs={12} className="text-center">
+                  <div className="d-flex align-items-center justify-content-between progress-container">
+                    <ProgressBar now={now} className="certifications-progress flex-grow-1" />
+                    <span className="progress-label ml-3">{`${now}%`}</span>
+                  </div>
+                </Col>
+              </Row>
+            </div>
 
+        
+        {/* My Events Section */}
         <div className="top-content-container mb-5 pb-5">
-          <h2 className="top-content-title mb-5">Top content</h2>
+          <h2 className="top-content-title mb-5">My Events</h2>
           <div className="carousel-wrapper">
             <Carousel interval={null} indicators={false} prevIcon={<span className="carousel-control-prev-icon" aria-hidden="true" />} nextIcon={<span className="carousel-control-next-icon" aria-hidden="true" />}>
               <Carousel.Item>
@@ -186,4 +214,4 @@ function HomeChannel() {
   );
 }
 
-export default HomeChannel;
+export { HomeUsers };

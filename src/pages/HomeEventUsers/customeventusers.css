@@ -1,0 +1,325 @@
+/* Estilos base para el contenedor */
+.home-channel-container {
+  background-color: #111120;
+  color: white;
+  min-height: 60vh;
+  width: 100%; /* Asegúrate de que use el ancho completo disponible */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para los títulos dentro del contenedor */
+.home-channel-container h1 {
+  color: #ffffff;
+  text-align: center; 
+}
+
+
+
+.top-content-container {
+background-color: #82819333;
+padding: 20px;
+border-radius: 8px;
+width: 100%;
+max-width: 900px;
+margin-top: 20px;
+}
+
+
+
+.widthcol {
+  width: 68% !important;
+}
+
+
+.colorbtndropdown {
+  color: #ffffff;
+}
+
+.header-container {
+  align-items: center; /* Asegura alineación vertical centrada */
+}
+
+.custom-dropdown-menu {
+  background-color: #111120;
+  border-radius: 8px;
+  padding: 0;
+  width: 180px;
+}
+
+.custom-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 16px;
+  border-bottom: 1px solid #33333f;
+}
+
+
+
+.custom-dropdown-item:hover {
+  background-color: #33333f;
+  color: #ffffff;
+}
+
+.custom-dropdown-toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.colorbtndropdown {
+  color: #ffffff;
+}
+
+
+/* Estilos generales que se aplican a todos los tamaños de pantalla */
+.text-left, .text-start, .text-end {
+  text-align: left !important;
+}
+
+@media (max-width: 480px) {
+  .home-channel-container {
+      padding: 10px; /* Menos espacio en dispositivos muy pequeños */
+  }
+  .gdona {
+      height: 200px; /* Altura más pequeña para pantallas muy pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+
+.header-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-row .col-xs-2,
+.header-row .col-xs-8,
+.header-row .col-xs-2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header-row h1 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.header-row .col-xs-2 img {
+  width: 150px; /* Ajuste del tamaño del logo para móviles */
+  height: auto;
+}
+
+
+.custom-dropdown-toggle {
+  width: 100%;
+}
+
+
+
+.custom-dropdown-menu {
+width: 150px;
+}
+}
+
+@media (max-width: 576px) {
+
+
+
+
+.top-content-container {
+  padding: 10px;
+}
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .carousel-wrapper .carousel-item {
+    display: block;
+    text-align: center;
+  }
+
+  .carousel-wrapper .carousel-item .col-xs-12,
+  .carousel-wrapper .carousel-item .col-md-6,
+  .carousel-wrapper .carousel-item .col-lg-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .carousel-wrapper .carousel-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .search-bar-container {
+    width: 100%;
+  }
+  
+}
+
+/* Nuevos estilos para la nueva sección de eventos */
+.event-info {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.how-to-create-event-btn {
+  margin-right: 15px;
+  color: white;
+font-size: 12px;
+}
+
+.create-event-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.search-bar-container {
+  margin-top: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #2c2c3e;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-btn {
+  padding: 5px 10px;
+  background-color: #33333e;
+  border: none;
+}
+
+.placeholder-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .event-info {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .how-to-create-event-btn, .create-event-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar-container {
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    padding: 8px;
+  }
+
+  .search-input {
+    padding: 8px;
+  }
+}
+
+@media (min-width: 769px) {
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-row .col-xs-2 img {
+    width: 200px;
+    height: auto;
+  }
+  .desktop-margin {
+    margin-left: 3rem !important; 
+    padding-left: 3rem !important; 
+  }
+  
+}
+/* Estilos para la barra de búsqueda */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #33333f;
+  color: #ffffff;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; 
+  border-radius: 5px;
+  /*border: 1px solid #ddd;*/
+  background-color: #33333f;
+  color: #fff;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px; 
+  cursor: pointer;
+  color: #fff; 
+}
+
+.search-bar-container {
+  
+  width: 60%;
+}
+
+.bgbarprogress{
+  background: #33333f;
+}
+
+.event-item {
+  background-color: #1e1e30; /* Color de fondo similar al de la tarjeta */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.event-image {
+  width: 500px; /* Ancho completo de la imagen */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.event-title {
+  color: white; /* Color del título */
+  font-size: 1.5rem; /* Tamaño de fuente del título */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.progress-container {
+  width: 100%; /* Asegura que el ProgressBar ocupe todo el ancho disponible */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.certifications-progress {
+  height: 8px; /* Altura personalizada para el ProgressBar */
+  background-color: #333346; /* Color de fondo del ProgressBar */
+}
+
+.progress-label {
+  color: white; /* Color del texto de porcentaje */
+  font-weight: bold; /* Negrita para el porcentaje */
+}
