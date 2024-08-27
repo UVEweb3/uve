@@ -135,4 +135,4 @@ function HomeEvent() {
   );
 }
 
-export default HomeEvent;
+export { HomeEvent };

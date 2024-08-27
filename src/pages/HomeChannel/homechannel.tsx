@@ -11,7 +11,7 @@ type Props = {
   isAccountVisible: boolean;
 };
 
-function HomeChannel() {
+function HomeChannel () {
   const { account } = useAccount();
   const { 
     currentVoucherId,
@@ -186,4 +186,4 @@ function HomeChannel() {
   );
 }
 
-export default HomeChannel;
+export { HomeChannel };

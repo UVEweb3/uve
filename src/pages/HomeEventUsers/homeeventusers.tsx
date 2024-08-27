@@ -175,4 +175,4 @@ function HomeEventUsers() {
   );
 }
 
-export default HomeEventUsers;
+export { HomeEventUsers };
