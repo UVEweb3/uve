@@ -101,7 +101,7 @@ function HomeUsers() {
         <div className="home-channel-container gdona">
           <Row className="justify-content-center bgdona">
             <Col md={12} className="mb-4 align-items-end">
-              <h2 className='mt-4 ml-5' >My activities</h2>
+              <h2 className='mt-4 ml-5' >My activities </h2>
               <DonutChart />
             </Col>
           </Row>
