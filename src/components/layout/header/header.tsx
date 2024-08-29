@@ -15,21 +15,22 @@ export function Header({ isAccountVisible }: Props) {
 
   return (
     <header>
-       <Navbar collapseOnSelect expand="lg" style={{backgroundColor:'#111120'}}>
-        <Navbar.Brand href="/">
-          <img className='logo'  src="/src/components/layout/header/img/LogoUVE.png" alt="Logo" height="40" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link href="#home" style={{color:'white',marginRight:'2.5rem'}} >About us</Nav.Link>
-            <Nav.Link href="#features" style={{color:'white',marginRight:'2.5rem'}} >Events</Nav.Link>
-            <Nav.Link href="#features" style={{color:'white',marginRight:'2.5rem'}} >MarketPlace</Nav.Link>
-            {isAccountVisible && <AccountInfo />}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </header>
+  <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#111120' }}>
+    <Navbar.Brand href="/"> 
+      <img className='logo' src="/src/components/layout/header/img/LogoUVE.png" alt="Logo" height="40" />
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="ml-auto">
+        <Nav.Link href="#home" style={{ color: 'white', marginRight: '2.5rem' }}>About us</Nav.Link>
+        <Nav.Link href="#features" style={{ color: 'white', marginRight: '2.5rem' }}>Events</Nav.Link>
+        <Nav.Link href="#features" style={{ color: 'white', marginRight: '2.5rem' }}>MarketPlace</Nav.Link>
+        {isAccountVisible && <AccountInfo />}
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
+</header>
+
   );
 
 
